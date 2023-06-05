@@ -1,4 +1,4 @@
-if (!mobilecheck()){
+if (!typeof window.orientation !== "undefined" || navigator.userAgent.indexOf("IEMobile") !== -1){
 const cursor = document.getElementById("custom-cursor");
 const cursorLittle = document.getElementById("little-cursor");
 const magnetElements = document.querySelectorAll(".magnet-element");
