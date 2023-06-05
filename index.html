@@ -32,7 +32,7 @@
 
   <!-- Navigation Menu -->
   <nav class="menu">
-    
+
     <div class="left-menu">
       <a class="menu-button">
         <div class="big-square square"></div>
@@ -121,17 +121,18 @@
 
   <div class="noise"></div>
   <div id="custom-cursor"></div>
+  <div id="little-cursor"></div>
 
 </body>
+
+<script type="text/javascript" src="js/mobileCheck.js"></script>
 <script type="text/javascript" src="js/cursor.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
-<script type="text/javascript" src="js/ScrollReveal.js"></script>
-<script type="text/javascript" src="js/smoothScroll.js"></script>
+<script type="text/javascript" src="js/scrollReveal.js"></script>
+
 
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
-
 <script type="text/javascript">
-  
   const lenis = new Lenis({
     duration: 1,
     easing: (t) => (t === 1 ? 1 : 1 - Math.pow(1 - t, 4)), // https://easings.net
@@ -139,7 +140,7 @@
     smooth: true,
     smoothTouch: false,
     touchMultiplier: 1.5,
-  }); 
+  });
 
   function raf(time) {
     lenis.raf(time);

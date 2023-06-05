@@ -95,7 +95,7 @@ h1 {
   transition: background-color .3s ease-in-out;
 }
 
-/* #little-cursor {
+#little-cursor {
   position: fixed;
   top: 0;
   left: 0;
@@ -107,7 +107,7 @@ h1 {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-} */
+}
 
 .noise {
   position: fixed;
@@ -600,7 +600,7 @@ h1 {
   align-items: center;
   flex-direction: column;
   color: var(--primary-color);
-  font-size: 30rem;
+  font-size: 500px;
   font-weight: bold;
 }
 

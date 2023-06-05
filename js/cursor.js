@@ -1,5 +1,6 @@
+if (!mobilecheck()){
 const cursor = document.getElementById("custom-cursor");
-// const cursorLittle = document.getElementById("little-cursor");
+const cursorLittle = document.getElementById("little-cursor");
 const magnetElements = document.querySelectorAll(".magnet-element");
 const links = document.querySelectorAll("a");
 
@@ -76,14 +77,14 @@ function animateCursor() {
     scaleSpring += scaleVelocity * scaleStrength;
     cursor.style.backgroundColor = "white";
     cursor.style.mixBlendMode = "difference";
-    // cursorLittle.style.display = "none";
+    cursorLittle.style.display = "none";
   } else {
     const scaleDistance = 1 - scale;
     scaleVelocity = scaleDistance * scaleSpeed;
     scaleSpring += scaleVelocity * scaleStrength;
     cursor.style.backgroundColor = "transparent";
     cursor.style.mixBlendMode = "none";
-    // cursorLittle.style.display = "";
+    cursorLittle.style.display = "";
   }
 
   scale += scaleVelocity + scaleSpring;
@@ -92,23 +93,24 @@ function animateCursor() {
   requestAnimationFrame(animateCursor);
 }
 
-// function animateCursorLittle() {
-//   const targetX = cursorX - cursorLittleSize / 2;
-//   const targetY = cursorY - cursorLittleSize / 2;
+function animateCursorLittle() {
+  const targetX = cursorX - cursorLittleSize / 2;
+  const targetY = cursorY - cursorLittleSize / 2;
 
-//   const startX = parseFloat(cursorLittle.style.left) || targetX;
-//   const startY = parseFloat(cursorLittle.style.top) || targetY;
+  const startX = parseFloat(cursorLittle.style.left) || targetX;
+  const startY = parseFloat(cursorLittle.style.top) || targetY;
 
-//   const dx = targetX - startX;
-//   const dy = targetY - startY;
+  const dx = targetX - startX;
+  const dy = targetY - startY;
 
-//   const newX = startX + dx;
-//   const newY = startY + dy;
+  const newX = startX + dx;
+  const newY = startY + dy;
 
-//   cursorLittle.style.transform = `translate(${newX}px, ${newY}px)`;
+  cursorLittle.style.transform = `translate(${newX}px, ${newY}px)`;
 
-//   requestAnimationFrame(animateCursorLittle);
-// }
+  requestAnimationFrame(animateCursorLittle);
+}
 
-// animateCursorLittle();
+animateCursorLittle();
 animateCursor();
+}
