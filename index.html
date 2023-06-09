@@ -33,7 +33,7 @@
   <!-- Navigation Menu -->
   <nav class="menu">
 
-    <div class="left-menu">
+    <div class="right-menu">
       <a class="menu-button">
         <div class="big-square square"></div>
         <div class="little-square square"></div>
@@ -80,11 +80,28 @@
   <main class="document-content">
 
     <section class="home" id="home">
+
+      <div class="home-logo">
+        <p>A</p>
+        <p>u</p>
+        <p>r</p>
+        <p>e</p>
+        <p>l</p>
+        <p>e</p>
+        <p>J</p>
+        <p>.</p>
+      </div>
+      
       <div class="home-content">
         <div class="home-description">Hello ! I'm Aurele J and welcome on my portfolio</div>
       </div>
 
-      <div class="home-img-background"></div>
+      <!-- <div class="home-img-background"></div> -->
+      <div class="blob-cont">
+        <div class="yellow blob"></div>
+        <div class="red blob"></div>
+        <div class="green blob"></div>
+      </div>
 
       <div class="resaux">
         <a target="_blank" href="https://twitter.com/AureleCode"><i class="fa fa-twitter magnet-element"></i></a>
@@ -135,7 +152,7 @@
 <script type="text/javascript">
   const lenis = new Lenis({
     duration: 1,
-    easing: (t) => (t === 1 ? 1 : 1 - Math.pow(1 - t, 4)), // https://easings.net
+    easing: (t) => (t === 1 ? 1 : 1 - Math.pow(1 - t, 4)),
     direction: 'vertical',
     smooth: true,
     smoothTouch: false,

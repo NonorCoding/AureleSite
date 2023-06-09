@@ -11,8 +11,6 @@ window.addEventListener("scroll", () => {
 
   var pos = window.innerHeight;
 
-  console.log(scroll, pos);
-
   parties.forEach((partie) => {
     partie.style.height = `${Math.max(0, -scroll + window.innerHeight / 2)}px`;
   });

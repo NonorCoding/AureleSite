@@ -50,6 +50,19 @@ menuItems.forEach((links) => {
   });
 });
 
+menuSliderItems = document.querySelectorAll(".menu-slider-items");
+
+menuSliderItems.forEach((menuButton) =>{
+  menuButton.addEventListener("click", () => {
+    menuSliderItems.forEach((item) => {
+      item.classList.remove("menu-active-item");
+    });
+    menuButton.classList.add("menu-active-item");
+    console.log(menuButton);
+  });
+})
+
+
 // --------------------------------------------------------------------------------
 // let modeActive = true;
 // let langageActive = true;
